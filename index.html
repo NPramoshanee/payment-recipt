@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu and Payment Receipt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anura Hotel Menu</h1>
+        <form id="menu-form" action="order.php" method="POST">
+            <div class="menu-item">
+                <label for="pizza">Pizza (LKR 1500)</label>
+                <input type="number" id="pizza" name="pizza" min="0" value="0">
+            </div>
+            <div class="menu-item">
+                <label for="roti">Roti (LKR 1500)</label>
+                <input type="number" id="roti" name="roti" min="0" value="0">
+            </div>
+            <div class="menu-item">
+                <label for="rice">Rice (LKR 500)</label>
+                <input type="number" id="rice" name="rice" min="0" value="0">
+            </div>
+            <div class="form-group">
+                <button type="button" id="order-now">Order Now</button>
+            </div>
+        </form>
+
+        <h2>Payment Receipt</h2>
+        <div id="receipt">
+            <p>Anura Hotel</p>
+            <p>Mihinthalaya para, pullayar handiya</p>
+            <p>Anuradhapura</p>
+            <p>EF.No: <span id="ef-no"></span></p>
+            <p>Payment Date: <span id="payment-date"></span></p>
+            <p>Time: <span id="payment-time"></span></p>
+            <table id="receipt-table">
+                <thead>
+                    <tr>
+                        <th>Item Names</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="receipt-body">
+                </tbody>
+            </table>
+            <p>Total payable: LKR <span id="total-payable"></span></p>
+            <p>Total paid: LKR <input type="number" id="total-paid" value=" "></p>
+            <p>Balance: LKR <span id="balance"></span></p>
+            <p>Thank you…Come Again!!!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
